@@ -1,11 +1,15 @@
-import React from 'react'
-
-const Header = () => {
+import React from "react";
+// eslint-disable-next-line react/prop-types
+const Header = ({title}) => {
   return (
     <header>
-        <h1> Groceries List </h1>     
+        <h1>{title} </h1>     
     </header>
   )
 }
 
-export default Header
+Header.defaultProps = {
+  title: "Default Title"
+}
+
+export default Header;
